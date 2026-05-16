@@ -86,20 +86,22 @@
 
 <body>
 
-    <div class="min-h-screen flex">
+    <div class="min-h-screen flex flex-col lg:flex-row">
 
-        <aside class="w-[280px] sidebar-gradient border-r border-indigo-100 flex flex-col justify-between">
+        <aside
+            class="w-full lg:w-[280px] lg:min-h-screen sidebar-gradient border-b lg:border-b-0 lg:border-r border-indigo-100 flex flex-col justify-between">
 
             <div>
 
                 <div class="px-8 pt-10 pb-8">
-                    <div class="items-center gap-3">
-                        <div class="w-14 h-14 rounded-2xl primary-gradient flex items-center justify-center shadow-lg">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl primary-gradient flex items-center justify-center shadow-lg">
                             <i class="fa-solid fa-book-open text-white text-xl"></i>
                         </div>
 
                         <div>
-                            <h1 class="text-3xl font-bold text-slate-800">
+                            <h1 class="text-2xl md:text-3xl font-bold text-slate-800">
                                 ReadSense AI
                             </h1>
 
@@ -110,41 +112,41 @@
                     </div>
                 </div>
 
-                <nav class="px-5 space-y-3">
+                <nav class="px-5 space-y-3 lg:space-y-3 grid grid-cols-2 gap-2 lg:block mb-6 lg:mb-0">
 
                     <a href="/productivity"
-                        class="menu-item flex items-center gap-4 px-5 py-4 rounded-2xl font-semibold">
+                        class="menu-item flex items-center gap-2 md:gap-4 px-4 py-3 md:px-5 md:py-4 rounded-2xl font-semibold text-sm md:text-base">
                         <i class="fa-solid fa-house text-lg"></i>
                         Dashboard
                     </a>
 
                     <a href="/statistics"
-                        class="menu-active flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-600 font-medium">
+                        class="menu-active flex items-center gap-2 md:gap-4 px-4 py-3 md:px-5 md:py-4 rounded-2xl text-white font-medium text-sm md:text-base">
                         <i class="fa-solid fa-chart-pie"></i>
                         Statistics
                     </a>
 
                     <a href="/history"
-                        class="menu-item flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-600 font-medium">
+                        class="menu-item flex items-center gap-2 md:gap-4 px-4 py-3 md:px-5 md:py-4 rounded-2xl text-slate-600 font-medium text-sm md:text-base">
                         <i class="fa-solid fa-chart-pie"></i>
                         History
                     </a>
 
                     <a href="/about"
-                        class="menu-item flex items-center gap-4 px-5 py-4 rounded-2xl text-slate-600 font-medium">
+                        class="menu-item flex items-center gap-2 md:gap-4 px-4 py-3 md:px-5 md:py-4 rounded-2xl text-slate-600 font-medium text-sm md:text-base">
                         <i class="fa-solid fa-circle-info"></i>
                         About
                     </a>
 
                 </nav>
 
-                <div class="px-6 mt-12">
+                <div class="hidden lg:block px-6 mt-12">
                     <img src="https://cdn-icons-png.flaticon.com/512/2436/2436874.png" class="w-full opacity-95" />
                 </div>
 
             </div>
 
-            <div class="p-5">
+            <div class="hidden lg:block p-5">
                 <div class="glass-card rounded-2xl p-4 flex items-center gap-4">
                     <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600">
                         <i class="fa-solid fa-users"></i>
@@ -164,28 +166,29 @@
 
         </aside>
 
-        <main class="flex-1 p-8">
+        <main class="flex-1 p-5 md:p-8 w-full overflow-hidden">
 
-            <div class="flex items-center justify-between mb-10">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 md:mb-10">
 
                 <div>
 
-                    <h1 class="text-6xl font-bold text-slate-800">
+                    <h1 class="text-4xl md:text-6xl font-bold text-slate-800">
                         Statistics
                     </h1>
 
-                    <p class="text-slate-500 mt-3 text-xl">
+                    <p class="text-slate-500 mt-2 md:mt-3 text-base md:text-xl">
                         Visualisasi dan analisis produktivitas pengguna berdasarkan data clustering.
                     </p>
 
                 </div>
 
-                <div class="flex items-center gap-8">
+                <div class="flex items-center gap-8 self-start md:self-auto">
 
-                    <div class="flex items-center gap-3 text-slate-600">
+                    <div
+                        class="flex items-center gap-3 text-slate-600 bg-white md:bg-transparent px-4 py-2 md:p-0 rounded-xl border md:border-0 border-slate-200">
                         <i class="fa-regular fa-calendar text-lg"></i>
 
-                        <span class="font-medium">
+                        <span class="font-medium text-sm md:text-base">
                             {{ now()->translatedFormat('d F Y') }}
                         </span>
                     </div>
@@ -194,27 +197,27 @@
 
             </div>
 
-            <div class="grid grid-cols-3 gap-6 mb-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
 
                 <div class="glass-card rounded-3xl p-6">
 
-                    <div class="flex gap-5">
+                    <div class="flex gap-4 md:gap-5">
 
                         <div
-                            class="w-20 h-20 rounded-3xl primary-gradient flex items-center justify-center text-white shadow-lg">
-                            <i class="fa-solid fa-database text-3xl"></i>
+                            class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-3xl primary-gradient flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-database text-2xl md:text-3xl"></i>
                         </div>
 
                         <div>
-                            <p class="text-slate-500 font-medium">
+                            <p class="text-slate-500 text-sm md:text-base font-medium">
                                 Total Data
                             </p>
 
-                            <h2 class="text-5xl font-bold text-slate-800 mt-1">
+                            <h2 class="text-3xl md:text-5xl font-bold text-slate-800 mt-1">
                                 {{ $history->count() }}
                             </h2>
 
-                            <p class="text-slate-400 mt-2">
+                            <p class="text-slate-400 mt-1 md:mt-2 text-xs md:text-sm">
                                 Seluruh data tersimpan
                             </p>
                         </div>
@@ -225,23 +228,23 @@
 
                 <div class="glass-card rounded-3xl p-6">
 
-                    <div class="flex gap-5">
+                    <div class="flex gap-4 md:gap-5">
 
                         <div
-                            class="w-20 h-20 rounded-3xl green-gradient flex items-center justify-center text-white shadow-lg">
-                            <i class="fa-solid fa-star text-3xl"></i>
+                            class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-3xl green-gradient flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-star text-2xl md:text-3xl"></i>
                         </div>
 
                         <div>
-                            <p class="text-slate-500 font-medium">
+                            <p class="text-slate-500 text-sm md:text-base font-medium">
                                 Dominan Cluster
                             </p>
 
-                            <h2 class="text-3xl font-bold text-slate-800 mt-2">
+                            <h2 class="text-xl md:text-3xl font-bold text-slate-800 mt-2 leading-tight">
                                 {{ $dominantCluster }}
                             </h2>
 
-                            <p class="text-green-600 mt-2 font-medium">
+                            <p class="text-green-600 mt-1 md:mt-2 font-medium text-xs md:text-sm">
                                 Cluster paling aktif
                             </p>
                         </div>
@@ -252,23 +255,23 @@
 
                 <div class="glass-card rounded-3xl p-6">
 
-                    <div class="flex gap-5">
+                    <div class="flex gap-4 md:gap-5">
 
                         <div
-                            class="w-20 h-20 rounded-3xl purple-gradient flex items-center justify-center text-white shadow-lg">
-                            <i class="fa-solid fa-brain text-3xl"></i>
+                            class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-3xl purple-gradient flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-brain text-2xl md:text-3xl"></i>
                         </div>
 
                         <div>
-                            <p class="text-slate-500 font-medium">
+                            <p class="text-slate-500 text-sm md:text-base font-medium">
                                 Rata-rata Fokus
                             </p>
 
-                            <h2 class="text-5xl font-bold text-slate-800 mt-1">
+                            <h2 class="text-3xl md:text-5xl font-bold text-slate-800 mt-1">
                                 {{ $avgFocus }}/5
                             </h2>
 
-                            <p class="text-purple-600 mt-2 font-medium">
+                            <p class="text-purple-600 mt-1 md:mt-2 font-medium text-xs md:text-sm">
                                 Dari skala 5
                             </p>
                         </div>
@@ -279,43 +282,43 @@
 
             </div>
 
-            <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
 
-                <div class="glass-card rounded-3xl p-7">
+                <div class="glass-card rounded-3xl p-5 md:p-7">
 
-                    <div class="mb-6">
+                    <div class="mb-4 md:mb-6">
 
-                        <h2 class="text-3xl font-bold text-slate-800">
+                        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">
                             Distribusi Produktivitas
                         </h2>
 
-                        <p class="text-slate-500 mt-2">
+                        <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">
                             Persentase hasil clustering pengguna.
                         </p>
 
                     </div>
 
-                    <div class="h-[350px] flex items-center justify-center">
+                    <div class="h-[250px] md:h-[350px] flex items-center justify-center relative w-full">
                         <canvas id="pieChart"></canvas>
                     </div>
 
                 </div>
 
-                <div class="glass-card rounded-3xl p-7">
+                <div class="glass-card rounded-3xl p-5 md:p-7">
 
-                    <div class="mb-6">
+                    <div class="mb-4 md:mb-6">
 
-                        <h2 class="text-3xl font-bold text-slate-800">
+                        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">
                             Trend Produktivitas
                         </h2>
 
-                        <p class="text-slate-500 mt-2">
+                        <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">
                             Perubahan produktivitas pengguna.
                         </p>
 
                     </div>
 
-                    <div class="h-[350px]">
+                    <div class="h-[250px] md:h-[350px] relative w-full">
                         <canvas id="lineChart"></canvas>
                     </div>
 
@@ -323,53 +326,53 @@
 
             </div>
 
-            <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
 
-                <div class="glass-card rounded-3xl p-7">
+                <div class="glass-card rounded-3xl p-5 md:p-7">
 
-                    <div class="mb-6">
+                    <div class="mb-4 md:mb-6">
 
-                        <h2 class="text-3xl font-bold text-slate-800">
+                        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">
                             Tingkat Fokus
                         </h2>
 
-                        <p class="text-slate-500 mt-2">
+                        <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">
                             Distribusi tingkat fokus pengguna.
                         </p>
 
                     </div>
 
-                    <div class="h-[350px]">
+                    <div class="h-[250px] md:h-[350px] relative w-full">
                         <canvas id="barChart"></canvas>
                     </div>
 
                 </div>
 
-                <div class="glass-card rounded-3xl p-7">
+                <div class="glass-card rounded-3xl p-5 md:p-7">
 
-                    <div class="mb-8">
+                    <div class="mb-6 md:mb-8">
 
-                        <h2 class="text-3xl font-bold text-slate-800">
+                        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">
                             Device Analytics
                         </h2>
 
-                        <p class="text-slate-500 mt-2">
+                        <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">
                             Analisis parameter produktivitas.
                         </p>
 
                     </div>
 
-                    <div class="space-y-8">
+                    <div class="space-y-6 md:space-y-8">
 
                         <div>
 
-                            <div class="flex justify-between mb-3">
+                            <div class="flex justify-between mb-2 md:mb-3">
 
-                                <span class="font-semibold text-slate-700">
+                                <span class="font-semibold text-slate-700 text-sm md:text-base">
                                     Fokus Belajar
                                 </span>
 
-                                <span class="font-bold text-indigo-600">
+                                <span class="font-bold text-indigo-600 text-sm md:text-base">
                                     {{ ($avgFocus / 5) * 100 }}%
                                 </span>
 
@@ -384,13 +387,13 @@
 
                         <div>
 
-                            <div class="flex justify-between mb-3">
+                            <div class="flex justify-between mb-2 md:mb-3">
 
-                                <span class="font-semibold text-slate-700">
+                                <span class="font-semibold text-slate-700 text-sm md:text-base">
                                     Penggunaan Buku
                                 </span>
 
-                                <span class="font-bold text-green-600">
+                                <span class="font-bold text-green-600 text-sm md:text-base">
                                     {{ ($avgBook / 5) * 100 }}%
                                 </span>
 
@@ -405,13 +408,13 @@
 
                         <div>
 
-                            <div class="flex justify-between mb-3">
+                            <div class="flex justify-between mb-2 md:mb-3">
 
-                                <span class="font-semibold text-slate-700">
+                                <span class="font-semibold text-slate-700 text-sm md:text-base">
                                     Intensitas Device
                                 </span>
 
-                                <span class="font-bold text-purple-600">
+                                <span class="font-bold text-purple-600 text-sm md:text-base">
                                     {{ ($avgDevice / 5) * 100 }}%
                                 </span>
 
@@ -431,32 +434,33 @@
 
             </div>
 
-            <div class="glass-card rounded-3xl p-8">
+            <div class="glass-card rounded-3xl p-5 md:p-8">
 
-                <div class="flex items-start gap-6">
+                <div class="flex flex-col md:flex-row items-start gap-4 md:gap-6">
 
                     <div
-                        class="w-24 h-24 rounded-3xl purple-gradient flex items-center justify-center text-white shadow-lg">
-                        <i class="fa-solid fa-lightbulb text-4xl"></i>
+                        class="w-16 h-16 md:w-24 md:h-24 shrink-0 rounded-2xl md:rounded-3xl purple-gradient flex items-center justify-center text-white shadow-lg">
+                        <i class="fa-solid fa-lightbulb text-2xl md:text-4xl"></i>
                     </div>
 
                     <div>
 
-                        <h2 class="text-4xl font-bold text-slate-800 mb-4">
+                        <h2 class="text-2xl md:text-4xl font-bold text-slate-800 mb-2 md:mb-4">
                             Insight & Recommendation
                         </h2>
 
-                        <p class="text-slate-600 text-lg leading-9">
+                        <p class="text-slate-600 text-sm md:text-lg leading-relaxed md:leading-9">
                             {{ $insight }}
                         </p>
 
-                        <div class="mt-6 bg-purple-50 border border-purple-100 rounded-2xl p-5">
+                        <div
+                            class="mt-4 md:mt-6 bg-purple-50 border border-purple-100 rounded-xl md:rounded-2xl p-4 md:p-5">
 
-                            <h4 class="font-bold text-purple-700 text-xl mb-2">
+                            <h4 class="font-bold text-purple-700 text-lg md:text-xl mb-1 md:mb-2">
                                 Tips
                             </h4>
 
-                            <p class="text-slate-600 leading-8">
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed md:leading-8">
                                 {{ $tips }}
                             </p>
 
