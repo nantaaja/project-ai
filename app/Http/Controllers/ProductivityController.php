@@ -149,28 +149,33 @@ class ProductivityController extends Controller
     }
 
     private function determineLabel($data)
-    {
-        if ($data['tingkat_fokus'] >= 5) {
-
-            return ($data['tingkat_interaksi'] >= 3)
-                ? 'Produktif Kolaboratif'
-                : 'Produktif Individu';
-        }
-
-        if ($data['tingkat_fokus'] == 4) {
-
-            if ($data['lama_waktu'] >= 4) {
-
-                return ($data['tingkat_interaksi'] >= 3)
-                    ? 'Produktif Kolaboratif'
-                    : 'Produktif Individu';
-            }
-
-            return 'Kurang Produktif';
-        }
-
+{
+    // Kurang Produktif
+    if (
+        $data['tingkat_fokus'] <= 2 &&
+        $data['intensitas_device'] >= 4
+    ) {
         return 'Kurang Produktif';
     }
+
+    // Produktif Individu
+    if (
+        $data['tingkat_fokus'] >= 3 &&
+        $data['tingkat_interaksi'] <= 2
+    ) {
+        return 'Produktif Individu';
+    }
+
+    // Produktif Kolaboratif
+    if (
+        $data['tingkat_fokus'] >= 3 &&
+        $data['tingkat_interaksi'] >= 3
+    ) {
+        return 'Produktif Kolaboratif';
+    }
+
+    return 'Kurang Produktif';
+}
 
     private function generateInsight($history)
     {
