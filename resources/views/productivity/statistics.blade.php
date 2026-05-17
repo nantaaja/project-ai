@@ -199,83 +199,86 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
 
-                <div class="glass-card rounded-3xl p-6">
-
-                    <div class="flex gap-4 md:gap-5">
-
+                <div class="glass-card rounded-3xl p-4 sm:p-6">
+                    <div class="flex items-center gap-3 sm:gap-5 h-full">
                         <div
-                            class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-3xl primary-gradient flex items-center justify-center text-white shadow-lg">
-                            <i class="fa-solid fa-database text-2xl md:text-3xl"></i>
+                            class="w-12 h-12 sm:w-16 sm:h-16 lg:w-12 lg:h-12 xl:w-20 xl:h-20 shrink-0 rounded-2xl md:rounded-3xl primary-gradient flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-database text-xl sm:text-2xl xl:text-3xl"></i>
                         </div>
-
-                        <div>
-                            <p class="text-slate-500 text-sm md:text-base font-medium">
+                        <div class="min-w-0 flex-1">
+                            <p class="text-slate-500 text-xs sm:text-sm font-medium truncate">
                                 Total Data
                             </p>
-
-                            <h2 class="text-3xl md:text-5xl font-bold text-slate-800 mt-1">
+                            <h2 class="text-xl sm:text-3xl lg:text-xl xl:text-5xl font-bold text-slate-800 mt-0.5">
                                 {{ $history->count() }}
                             </h2>
-
-                            <p class="text-slate-400 mt-1 md:mt-2 text-xs md:text-sm">
+                            <p class="text-slate-400 text-[10px] sm:text-xs mt-0.5 truncate">
                                 Seluruh data tersimpan
                             </p>
                         </div>
-
                     </div>
-
                 </div>
 
-                <div class="glass-card rounded-3xl p-6">
-
-                    <div class="flex gap-4 md:gap-5">
-
+                <div class="glass-card rounded-3xl p-4 sm:p-6">
+                    <div class="flex items-center gap-3 sm:gap-5 h-full">
                         <div
-                            class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-3xl green-gradient flex items-center justify-center text-white shadow-lg">
-                            <i class="fa-solid fa-star text-2xl md:text-3xl"></i>
+                            class="w-12 h-12 sm:w-16 sm:h-16 lg:w-12 lg:h-12 xl:w-20 xl:h-20 shrink-0 rounded-2xl md:rounded-3xl green-gradient flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-star text-xl sm:text-2xl xl:text-3xl"></i>
                         </div>
-
-                        <div>
-                            <p class="text-slate-500 text-sm md:text-base font-medium">
+                        <div class="min-w-0 flex-1">
+                            <p class="text-slate-500 text-xs sm:text-sm font-medium truncate">
                                 Dominan Cluster
                             </p>
-
-                            <h2 class="text-xl md:text-3xl font-bold text-slate-800 mt-2 leading-tight">
+                            <h2 class="text-sm sm:text-lg lg:text-sm xl:text-2xl font-bold text-slate-800 mt-0.5 leading-tight break-words">
                                 {{ $dominantCluster }}
                             </h2>
-
-                            <p class="text-green-600 mt-1 md:mt-2 font-medium text-xs md:text-sm">
+                            <p class="text-green-600 text-[10px] sm:text-xs mt-0.5 font-medium truncate">
                                 Cluster paling aktif
                             </p>
                         </div>
-
                     </div>
-
                 </div>
 
-                <div class="glass-card rounded-3xl p-6">
-
-                    <div class="flex gap-4 md:gap-5">
-
+                <div class="glass-card rounded-3xl p-4 sm:p-6">
+                    <div class="flex items-center gap-3 sm:gap-5 h-full">
                         <div
-                            class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-3xl purple-gradient flex items-center justify-center text-white shadow-lg">
-                            <i class="fa-solid fa-brain text-2xl md:text-3xl"></i>
+                            class="w-12 h-12 sm:w-16 sm:h-16 lg:w-12 lg:h-12 xl:w-20 xl:h-20 shrink-0 rounded-2xl md:rounded-3xl purple-gradient flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-brain text-xl sm:text-2xl xl:text-3xl"></i>
                         </div>
-
-                        <div>
-                            <p class="text-slate-500 text-sm md:text-base font-medium">
+                        <div class="min-w-0 flex-1">
+                            <p class="text-slate-500 text-xs sm:text-sm font-medium truncate">
                                 Rata-rata Fokus
                             </p>
-
-                            <h2 class="text-3xl md:text-5xl font-bold text-slate-800 mt-1">
+                            <h2 class="text-xl sm:text-3xl lg:text-xl xl:text-5xl font-bold text-slate-800 mt-0.5">
                                 {{ $avgFocus }}/5
                             </h2>
-
-                            <p class="text-purple-600 mt-1 md:mt-2 font-medium text-xs md:text-sm">
+                            <p class="text-purple-600 text-[10px] sm:text-xs mt-0.5 truncate">
                                 Dari skala 5
                             </p>
                         </div>
+                    </div>
+                </div>
 
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+
+                <div class="glass-card rounded-3xl p-5 md:p-7 lg:col-span-2">
+
+                    <div class="mb-4 md:mb-6">
+
+                        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">
+                            Tingkat Fokus
+                        </h2>
+
+                        <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">
+                            Distribusi tingkat fokus pengguna.
+                        </p>
+
+                    </div>
+
+                    <div class="h-[250px] md:h-[350px] relative w-full">
+                        <canvas id="barChart"></canvas>
                     </div>
 
                 </div>
@@ -300,50 +303,6 @@
 
                     <div class="h-[250px] md:h-[350px] flex items-center justify-center relative w-full">
                         <canvas id="pieChart"></canvas>
-                    </div>
-
-                </div>
-
-                <div class="glass-card rounded-3xl p-5 md:p-7">
-
-                    <div class="mb-4 md:mb-6">
-
-                        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">
-                            Trend Produktivitas
-                        </h2>
-
-                        <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">
-                            Perubahan produktivitas pengguna.
-                        </p>
-
-                    </div>
-
-                    <div class="h-[250px] md:h-[350px] relative w-full">
-                        <canvas id="lineChart"></canvas>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-
-                <div class="glass-card rounded-3xl p-5 md:p-7">
-
-                    <div class="mb-4 md:mb-6">
-
-                        <h2 class="text-2xl md:text-3xl font-bold text-slate-800">
-                            Tingkat Fokus
-                        </h2>
-
-                        <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">
-                            Distribusi tingkat fokus pengguna.
-                        </p>
-
-                    </div>
-
-                    <div class="h-[250px] md:h-[350px] relative w-full">
-                        <canvas id="barChart"></canvas>
                     </div>
 
                 </div>
@@ -512,61 +471,6 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 cutout: '70%'
-            }
-
-        });
-
-        new Chart(document.getElementById('lineChart'), {
-
-            type: 'line',
-
-            data: {
-
-                labels: {!! json_encode($trendLabels) !!},
-
-                datasets: [{
-
-                    label: 'Rata-rata Fokus',
-
-                    data: {!! json_encode($trendValues) !!},
-
-                    borderColor: '#4f46e5',
-
-                    backgroundColor: 'rgba(79,70,229,0.1)',
-
-                    tension: 0.4,
-
-                    fill: true,
-
-                    pointBackgroundColor: '#4f46e5',
-
-                    pointRadius: 5
-
-                }]
-            },
-
-            options: {
-
-                responsive: true,
-
-                maintainAspectRatio: false,
-
-                scales: {
-
-                    y: {
-
-                        min: 0,
-
-                        max: 5,
-
-                        ticks: {
-                            stepSize: 1
-                        }
-
-                    }
-
-                }
-
             }
 
         });

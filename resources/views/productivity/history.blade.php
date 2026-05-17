@@ -141,7 +141,7 @@
             </div>
         </aside>
 
-        <main class="flex-1 p-5 md:p-8">
+        <main class="flex-1 p-5 md:p-8 w-full overflow-hidden">
 
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 md:mb-10">
                 <div>
@@ -167,41 +167,41 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div class="glass-card rounded-3xl p-6 md:p-8">
+                <div class="glass-card rounded-3xl p-4 sm:p-6 xl:p-8">
                     <div
-                        class="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl primary-gradient flex items-center justify-center text-white shadow-lg mb-5 md:mb-6">
-                        <i class="fa-solid fa-chart-line text-2xl md:text-3xl"></i>
+                        class="w-12 h-12 sm:w-16 sm:h-16 lg:w-12 lg:h-12 xl:w-20 xl:h-20 rounded-2xl md:rounded-3xl primary-gradient flex items-center justify-center text-white shadow-lg mb-4 sm:mb-6">
+                        <i class="fa-solid fa-chart-line text-lg sm:text-2xl xl:text-3xl"></i>
                     </div>
-                    <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-4">Produktif Individu</h2>
-                    <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-2 md:mb-4">
+                    <h2 class="text-sm sm:text-lg lg:text-sm xl:text-2xl font-bold text-slate-800 mb-1 sm:mb-2 truncate break-words">Produktif Individu</h2>
+                    <h1 class="text-2xl sm:text-4xl lg:text-2xl xl:text-5xl font-bold text-indigo-600 mb-1">
                         {{ \App\Models\ProductivityLog::where('label_hasil', 'Produktif Individu')->count() }}
                     </h1>
                 </div>
 
-                <div class="glass-card rounded-3xl p-6 md:p-8">
+                <div class="glass-card rounded-3xl p-4 sm:p-6 xl:p-8">
                     <div
-                        class="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl green-gradient flex items-center justify-center text-white shadow-lg mb-5 md:mb-6">
-                        <i class="fa-solid fa-users text-2xl md:text-3xl"></i>
+                        class="w-12 h-12 sm:w-16 sm:h-16 lg:w-12 lg:h-12 xl:w-20 xl:h-20 rounded-2xl md:rounded-3xl green-gradient flex items-center justify-center text-white shadow-lg mb-4 sm:mb-6">
+                        <i class="fa-solid fa-users text-lg sm:text-2xl xl:text-3xl"></i>
                     </div>
-                    <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-4">Produktif Kolaboratif</h2>
-                    <h1 class="text-4xl md:text-5xl font-bold text-green-600 mb-2 md:mb-4">
+                    <h2 class="text-sm sm:text-lg lg:text-sm xl:text-2xl font-bold text-slate-800 mb-1 sm:mb-2 truncate break-words">Produktif Kolaboratif</h2>
+                    <h1 class="text-2xl sm:text-4xl lg:text-2xl xl:text-5xl font-bold text-green-600 mb-1">
                         {{ \App\Models\ProductivityLog::where('label_hasil', 'Produktif Kolaboratif')->count() }}
                     </h1>
                 </div>
 
-                <div class="glass-card rounded-3xl p-6 md:p-8">
+                <div class="glass-card rounded-3xl p-4 sm:p-6 xl:p-8">
                     <div
-                        class="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl orange-gradient flex items-center justify-center text-white shadow-lg mb-5 md:mb-6">
-                        <i class="fa-solid fa-triangle-exclamation text-2xl md:text-3xl"></i>
+                        class="w-12 h-12 sm:w-16 sm:h-16 lg:w-12 lg:h-12 xl:w-20 xl:h-20 rounded-2xl md:rounded-3xl orange-gradient flex items-center justify-center text-white shadow-lg mb-4 sm:mb-6">
+                        <i class="fa-solid fa-triangle-exclamation text-lg sm:text-2xl xl:text-3xl"></i>
                     </div>
-                    <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-4">Kurang Produktif</h2>
-                    <h1 class="text-4xl md:text-5xl font-bold text-orange-500 mb-2 md:mb-4">
+                    <h2 class="text-sm sm:text-lg lg:text-sm xl:text-2xl font-bold text-slate-800 mb-1 sm:mb-2 truncate break-words">Kurang Produktif</h2>
+                    <h1 class="text-2xl sm:text-4xl lg:text-2xl xl:text-5xl font-bold text-orange-500 mb-1">
                         {{ \App\Models\ProductivityLog::where('label_hasil', 'Kurang Produktif')->count() }}
                     </h1>
                 </div>
             </div>
 
-            <div class="glass-card rounded-3xl p-5 md:p-8 mb-8">
+            <div class="glass-card rounded-3xl p-4 sm:p-6 md:p-8 mb-8">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
                     <div>
                         <h2 class="text-2xl md:text-3xl font-bold text-indigo-600">Riwayat Prediksi</h2>
@@ -225,27 +225,27 @@
                     <table class="w-full text-sm md:text-base whitespace-nowrap">
                         <thead>
                             <tr class="table-head text-slate-700">
-                                <th class="p-4 md:p-5 text-left rounded-l-2xl">No</th>
-                                <th class="p-4 md:p-5 text-left">Lama Waktu</th>
-                                <th class="p-4 md:p-5 text-left">Buku</th>
-                                <th class="p-4 md:p-5 text-left">Device</th>
-                                <th class="p-4 md:p-5 text-left">Interaksi</th>
-                                <th class="p-4 md:p-5 text-left">Fokus</th>
-                                <th class="p-4 md:p-5 text-left">Label</th>
-                                <th class="p-4 md:p-5 text-left rounded-r-2xl">Tanggal</th>
+                                <th class="p-4 md:p-5 text-center rounded-l-2xl">No</th>
+                                <th class="p-4 md:p-5 text-center">Lama Waktu</th>
+                                <th class="p-4 md:p-5 text-center">Buku</th>
+                                <th class="p-4 md:p-5 text-center">Device</th>
+                                <th class="p-4 md:p-5 text-center">Interaksi</th>
+                                <th class="p-4 md:p-5 text-center">Fokus</th>
+                                <th class="p-4 md:p-5 text-center">Label</th>
+                                <th class="p-4 md:p-5 text-center rounded-r-2xl">Tanggal</th>
                             </tr>
                         </thead>
                         <tbody id="historyTable">
                             @forelse(\App\Models\ProductivityLog::latest()->get() as $index => $item)
-                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition">
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition text-center">
                                     <td class="p-4 md:p-5">{{ $index + 1 }}</td>
                                     <td class="p-4 md:p-5">
                                         @switch($item->lama_waktu)
                                             @case(1)
-                                        < 15 Menit @break @case(2) 15 - 30 Menit @break
+                                        &lt; 15 Menit @break @case(2) 15 - 30 Menit @break
                                             @case(3) 31 - 45 Menit @break
                                             @case(4) 46 - 60 Menit @break
-                                                @case(5)> 60 Menit
+                                                @case(5)&gt; 60 Menit
                                                 @break
                                             @endswitch
                                     </td>
@@ -283,12 +283,10 @@
             let rows = document.querySelectorAll('#historyTable tr');
 
             rows.forEach(row => {
-                // Kolom Label berada di index ke-7 (index array 6) atau kolom ke-7 dari tabel
                 let labelCell = row.querySelector('td:nth-child(7)');
                 if (labelCell) {
                     let text = labelCell.innerText.toLowerCase();
 
-                    // Logika: Jika filter kosong (Tampilkan Semua) atau teks cell mengandung filter
                     if (filterValue === "" || text.includes(filterValue)) {
                         row.style.display = '';
                     } else {

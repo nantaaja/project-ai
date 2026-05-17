@@ -41,10 +41,6 @@
             background: linear-gradient(135deg, #4ade80, #22c55e);
         }
 
-        .purple-gradient {
-            background: linear-gradient(135deg, #a855f7, #7c3aed);
-        }
-
         .orange-gradient {
             background: linear-gradient(135deg, #fb923c, #f59e0b);
         }
@@ -182,45 +178,46 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div class="glass-card rounded-3xl p-6">
-                    <div class="flex items-center gap-5 h-full">
+                <div class="glass-card rounded-3xl p-4 sm:p-6">
+                    <div class="flex items-center gap-3 sm:gap-5 h-full">
                         <div
-                            class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-3xl primary-gradient flex items-center justify-center text-white shadow-lg">
-                            <i class="fa-solid fa-chart-simple text-2xl md:text-3xl"></i>
+                            class="w-12 h-12 sm:w-16 sm:h-16 lg:w-12 lg:h-12 xl:w-20 xl:h-20 shrink-0 rounded-2xl md:rounded-3xl primary-gradient flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-chart-simple text-xl sm:text-2xl xl:text-3xl"></i>
                         </div>
-                        <div>
-                            <p class="text-slate-500 text-sm md:text-base font-medium">Total Prediksi</p>
-                            <h2 class="text-3xl md:text-5xl font-bold text-slate-800 mt-1">{{ $totalPredictions }}</h2>
-                            <p class="text-slate-400 text-xs md:text-sm mt-1">Data keseluruhan</p>
+                        <div class="min-w-0 flex-1">
+                            <p class="text-slate-500 text-xs sm:text-sm font-medium truncate">Total Prediksi</p>
+                            <h2 class="text-xl sm:text-3xl lg:text-xl xl:text-5xl font-bold text-slate-800 mt-0.5">{{ $totalPredictions }}</h2>
+                            <p class="text-slate-400 text-[10px] sm:text-xs mt-0.5 truncate">Data keseluruhan</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="glass-card rounded-3xl p-6">
-                    <div class="flex items-center gap-5 h-full">
+                <div class="glass-card rounded-3xl p-4 sm:p-6">
+                    <div class="flex items-center gap-3 sm:gap-5 h-full">
                         <div
-                            class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-3xl green-gradient flex items-center justify-center text-white shadow-lg">
-                            <i class="fa-solid fa-chart-pie text-2xl md:text-3xl"></i>
+                            class="w-12 h-12 sm:w-16 sm:h-16 lg:w-12 lg:h-12 xl:w-20 xl:h-20 shrink-0 rounded-2xl md:rounded-3xl green-gradient flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-chart-pie text-xl sm:text-2xl xl:text-3xl"></i>
                         </div>
-                        <div>
-                            <p class="text-slate-500 text-sm md:text-base font-medium">Cluster Dominan</p>
-                            <h2 class="text-xl md:text-3xl font-bold text-slate-800 mt-1 leading-tight">
-                                {{ $dominantCluster ?? 'Belum Ada Data' }}</h2>
-                            <p class="text-green-600 text-xs md:text-sm mt-1 font-medium">Hasil paling sering muncul</p>
+                        <div class="min-w-0 flex-1">
+                            <p class="text-slate-500 text-xs sm:text-sm font-medium truncate">Cluster Dominan</p>
+                            <h2 class="text-sm sm:text-lg lg:text-sm xl:text-2xl font-bold text-slate-800 mt-0.5 leading-tight break-words">
+                                {{ $dominantCluster ?? 'Belum Ada Data' }}
+                            </h2>
+                            <p class="text-green-600 text-[10px] sm:text-xs mt-0.5 font-medium truncate">Hasil sering muncul</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="glass-card rounded-3xl p-6">
-                    <div class="flex items-center gap-5 h-full">
+                <div class="glass-card rounded-3xl p-4 sm:p-6">
+                    <div class="flex items-center gap-3 sm:gap-5 h-full">
                         <div
-                            class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-3xl orange-gradient flex items-center justify-center text-white shadow-lg">
-                            <i class="fa-solid fa-brain text-2xl md:text-3xl"></i>
+                            class="w-12 h-12 sm:w-16 sm:h-16 lg:w-12 lg:h-12 xl:w-20 xl:h-20 shrink-0 rounded-2xl md:rounded-3xl orange-gradient flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-brain text-xl sm:text-2xl xl:text-3xl"></i>
                         </div>
-                        <div>
-                            <p class="text-slate-500 text-sm md:text-base font-medium">Rata-rata Fokus</p>
-                            <h2 class="text-3xl md:text-5xl font-bold text-slate-800 mt-1">{{ $avgFocus }}/5</h2>
-                            <p class="text-orange-500 text-xs md:text-sm mt-1 font-medium">Tingkat fokus pengguna</p>
+                        <div class="min-w-0 flex-1">
+                            <p class="text-slate-500 text-xs sm:text-sm font-medium truncate">Rata-rata Fokus</p>
+                            <h2 class="text-xl sm:text-3xl lg:text-xl xl:text-5xl font-bold text-slate-800 mt-0.5">{{ $avgFocus }}/5</h2>
+                            <p class="text-orange-500 text-[10px] sm:text-xs mt-0.5 truncate">Tingkat fokus pengguna</p>
                         </div>
                     </div>
                 </div>
@@ -231,8 +228,7 @@
                     <div class="flex items-center justify-between mb-8">
                         <div>
                             <h2 class="text-2xl md:text-3xl font-bold text-indigo-600">Form Input</h2>
-                            <p class="text-slate-500 mt-2 text-sm md:text-base">Masukkan data berikut untuk mendapatkan
-                                hasil clustering.</p>
+                            <p class="text-slate-500 mt-2 text-sm md:text-base">Masukkan data berikut untuk mendapatkan hasil clustering.</p>
                         </div>
                         <div
                             class="hidden md:flex w-14 h-14 shrink-0 rounded-2xl bg-indigo-50 items-center justify-center text-indigo-600">
@@ -260,11 +256,11 @@
                             </div>
                             <select name="lama_waktu" class="custom-input" required>
                                 <option value="" disabled selected>Pilih lama waktu</option>
-                                <option value="1">1 (< 15 menit)</option>
+                                <option value="1">1 (&lt; 15 menit)</option>
                                 <option value="2">2 (15 - 30 menit)</option>
                                 <option value="3">3 (31 - 45 menit)</option>
                                 <option value="4">4 (46 - 60 menit)</option>
-                                <option value="5">5 (> 60 menit)</option>
+                                <option value="5">5 (&gt; 60 menit)</option>
                             </select>
                         </div>
 
@@ -282,7 +278,7 @@
                                 <option value="2">1 buku singkat</option>
                                 <option value="3">1 buku fokus</option>
                                 <option value="4">2 buku</option>
-                                <option value="5">> 2 buku aktif</option>
+                                <option value="5">&gt; 2 buku aktif</option>
                             </select>
                         </div>
 
@@ -355,8 +351,7 @@
                     <div class="flex items-center justify-between mb-6 md:mb-8">
                         <div>
                             <h2 class="text-2xl md:text-3xl font-bold text-purple-600">Hasil Prediksi</h2>
-                            <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">Hasil clustering berdasarkan
-                                data terbaru.</p>
+                            <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">Hasil clustering berdasarkan data terbaru.</p>
                         </div>
                         <div
                             class="hidden md:flex w-14 h-14 shrink-0 rounded-2xl bg-purple-50 items-center justify-center text-purple-600">
@@ -364,21 +359,19 @@
                         </div>
                     </div>
 
-                    <div class="soft-purple rounded-3xl border border-purple-100 p-6 md:p-8 mb-8">
-                        <div
-                            class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 md:gap-8">
+                    <div class="soft-purple rounded-3xl border border-purple-100 p-4 sm:p-6 md:p-8 mb-8">
+                        <div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center sm:items-start lg:items-center xl:items-start text-center sm:text-left lg:text-center xl:text-left gap-4 sm:gap-6">
                             <div
-                                class="w-24 h-24 md:w-36 md:h-36 shrink-0 rounded-full border-4 border-purple-500 flex items-center justify-center text-purple-600">
-                                <i class="fa-solid fa-star text-4xl md:text-5xl"></i>
+                                class="w-20 h-20 sm:w-24 lg:w-20 lg:h-20 xl:w-28 xl:h-28 shrink-0 rounded-full border-4 border-purple-500 flex items-center justify-center text-purple-600">
+                                <i class="fa-solid fa-star text-2xl sm:text-3xl xl:text-4xl"></i>
                             </div>
-                            <div>
-                                <p class="text-slate-500 font-medium">Label Clustering</p>
-                                <h1
-                                    class="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 mt-2 leading-tight">
+                            <div class="min-w-0 flex-1">
+                                <p class="text-slate-500 font-medium text-xs sm:text-sm">Label Clustering</p>
+                                <h1 class="text-xl sm:text-2xl lg:text-xl xl:text-3xl font-bold text-purple-600 mt-1 break-words leading-tight">
                                     {{ $latestResult->label_hasil ?? 'Belum Ada Data' }}
                                 </h1>
                                 <div
-                                    class="inline-flex mt-4 px-4 py-1 md:px-5 md:py-2 rounded-full bg-purple-200 text-purple-700 text-xs md:text-sm font-semibold">
+                                    class="inline-flex mt-3 px-4 py-1 rounded-full bg-purple-200 text-purple-700 text-xs font-semibold">
                                     Decision Tree
                                 </div>
                             </div>
@@ -386,8 +379,8 @@
                     </div>
 
                     <div>
-                        <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-3">Insight</h3>
-                        <p class="text-slate-600 leading-relaxed text-sm md:text-lg">
+                        <h3 class="text-lg md:text-xl font-bold text-slate-800 mb-2">Insight</h3>
+                        <p class="text-slate-600 leading-relaxed text-xs sm:text-sm md:text-base">
                             {{ $insight }}
                         </p>
                     </div>
@@ -398,8 +391,8 @@
                             <i class="fa-regular fa-lightbulb"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-purple-700 text-lg md:text-xl">Tips:</h4>
-                            <p class="text-slate-600 mt-1 md:mt-2 leading-relaxed text-sm md:text-base">
+                            <h4 class="font-bold text-purple-700 text-base md:text-lg">Tips:</h4>
+                            <p class="text-slate-600 mt-1 leading-relaxed text-xs sm:text-sm">
                                 {{ $tips }}
                             </p>
                         </div>
@@ -411,8 +404,7 @@
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 md:mb-8">
                     <div>
                         <h2 class="text-2xl md:text-3xl font-bold text-indigo-600">Riwayat Prediksi</h2>
-                        <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">Daftar data yang pernah dianalisis.
-                        </p>
+                        <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">Daftar data yang pernah dianalisis.</p>
                     </div>
                     <a href="/history"
                         class="w-full sm:w-auto px-6 h-12 md:h-14 rounded-xl md:rounded-2xl border border-slate-200 bg-white font-medium text-slate-700 hover:bg-slate-50 transition flex items-center justify-center">
@@ -425,18 +417,18 @@
                     <table class="w-full text-sm md:text-base whitespace-nowrap">
                         <thead>
                             <tr class="table-head text-slate-700">
-                                <th class="p-4 md:p-5 text-left rounded-l-2xl">No</th>
-                                <th class="p-4 md:p-5 text-left">Waktu</th>
-                                <th class="p-4 md:p-5 text-left">Buku</th>
-                                <th class="p-4 md:p-5 text-left">Device</th>
-                                <th class="p-4 md:p-5 text-left">Interaksi</th>
-                                <th class="p-4 md:p-5 text-left">Fokus</th>
-                                <th class="p-4 md:p-5 text-left">Label</th>
+                                <th class="p-4 md:p-5 text-center rounded-l-2xl">No</th>
+                                <th class="p-4 md:p-5 text-center">Waktu</th>
+                                <th class="p-4 md:p-5 text-center">Buku</th>
+                                <th class="p-4 md:p-5 text-center">Device</th>
+                                <th class="p-4 md:p-5 text-center">Interaksi</th>
+                                <th class="p-4 md:p-5 text-center">Fokus</th>
+                                <th class="p-4 md:p-5 text-center rounded-r-2xl">Label</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse($history as $index => $item)
-                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition">
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition text-center">
                                     <td class="p-4 md:p-5">{{ $index + 1 }}</td>
                                     <td class="p-4 md:p-5">{{ $item->lama_waktu }}</td>
                                     <td class="p-4 md:p-5">{{ $item->penggunaan_buku }}</td>
