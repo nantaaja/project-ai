@@ -146,8 +146,7 @@
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 md:mb-10">
                 <div>
                     <h1 class="text-4xl md:text-6xl font-bold text-slate-800">History</h1>
-                    <p class="text-slate-500 mt-2 md:mt-3 text-base md:text-xl">Seluruh riwayat hasil prediksi
-                        produktivitas.</p>
+                    <p class="text-slate-500 mt-2 md:mt-3 text-base md:text-xl">Seluruh riwayat hasil prediksi produktivitas.</p>
                 </div>
 
                 <div class="flex items-center self-start md:self-auto">
@@ -167,12 +166,46 @@
                 </div>
             </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="glass-card rounded-3xl p-6 md:p-8">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl primary-gradient flex items-center justify-center text-white shadow-lg mb-5 md:mb-6">
+                        <i class="fa-solid fa-chart-line text-2xl md:text-3xl"></i>
+                    </div>
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-4">Produktif Individu</h2>
+                    <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-2 md:mb-4">
+                        {{ \App\Models\ProductivityLog::where('label_hasil', 'Produktif Individu')->count() }}
+                    </h1>
+                </div>
+
+                <div class="glass-card rounded-3xl p-6 md:p-8">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl green-gradient flex items-center justify-center text-white shadow-lg mb-5 md:mb-6">
+                        <i class="fa-solid fa-users text-2xl md:text-3xl"></i>
+                    </div>
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-4">Produktif Kolaboratif</h2>
+                    <h1 class="text-4xl md:text-5xl font-bold text-green-600 mb-2 md:mb-4">
+                        {{ \App\Models\ProductivityLog::where('label_hasil', 'Produktif Kolaboratif')->count() }}
+                    </h1>
+                </div>
+
+                <div class="glass-card rounded-3xl p-6 md:p-8">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl orange-gradient flex items-center justify-center text-white shadow-lg mb-5 md:mb-6">
+                        <i class="fa-solid fa-triangle-exclamation text-2xl md:text-3xl"></i>
+                    </div>
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-4">Kurang Produktif</h2>
+                    <h1 class="text-4xl md:text-5xl font-bold text-orange-500 mb-2 md:mb-4">
+                        {{ \App\Models\ProductivityLog::where('label_hasil', 'Kurang Produktif')->count() }}
+                    </h1>
+                </div>
+            </div>
+
             <div class="glass-card rounded-3xl p-5 md:p-8 mb-8">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
                     <div>
                         <h2 class="text-2xl md:text-3xl font-bold text-indigo-600">Riwayat Prediksi</h2>
-                        <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">Daftar lengkap seluruh data
-                            produktivitas pengguna.</p>
+                        <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">Daftar lengkap seluruh data produktivitas pengguna.</p>
                     </div>
 
                     <div class="w-full md:w-[320px] relative">
@@ -229,79 +262,43 @@
                                     <td class="p-4 md:p-5 text-slate-500 text-xs md:text-sm">
                                         {{ $item->created_at->format('d M Y') }}</td>
                                 </tr>
-                                @empty
-                                    <tr>
-                                        <td colspan="8" class="text-center p-10 text-slate-400">Tidak ada data riwayat.
-                                        </td>
-                                    </tr>
-                                @endforelse
-                            </tbody>
-                        </table>
-                    </div>
+                            @empty
+                                <tr>
+                                    <td colspan="8" class="text-center p-10 text-slate-400">Tidak ada data riwayat.</td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
                 </div>
+            </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="glass-card rounded-3xl p-6 md:p-8">
-                        <div
-                            class="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl primary-gradient flex items-center justify-center text-white shadow-lg mb-5 md:mb-6">
-                            <i class="fa-solid fa-chart-line text-2xl md:text-3xl"></i>
-                        </div>
-                        <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-4">Produktif Individu</h2>
-                        <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-2 md:mb-4">
-                            {{ \App\Models\ProductivityLog::where('label_hasil', 'Produktif Individu')->count() }}
-                        </h1>
-                    </div>
+        </main>
+    </div>
 
-                    <div class="glass-card rounded-3xl p-6 md:p-8">
-                        <div
-                            class="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl green-gradient flex items-center justify-center text-white shadow-lg mb-5 md:mb-6">
-                            <i class="fa-solid fa-users text-2xl md:text-3xl"></i>
-                        </div>
-                        <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-4">Produktif Kolaboratif</h2>
-                        <h1 class="text-4xl md:text-5xl font-bold text-green-600 mb-2 md:mb-4">
-                            {{ \App\Models\ProductivityLog::where('label_hasil', 'Produktif Kolaboratif')->count() }}
-                        </h1>
-                    </div>
+    <script>
+        const filterSelect = document.getElementById('filterCluster');
 
-                    <div class="glass-card rounded-3xl p-6 md:p-8">
-                        <div
-                            class="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl orange-gradient flex items-center justify-center text-white shadow-lg mb-5 md:mb-6">
-                            <i class="fa-solid fa-triangle-exclamation text-2xl md:text-3xl"></i>
-                        </div>
-                        <h2 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:mb-4">Kurang Produktif</h2>
-                        <h1 class="text-4xl md:text-5xl font-bold text-orange-500 mb-2 md:mb-4">
-                            {{ \App\Models\ProductivityLog::where('label_hasil', 'Kurang Produktif')->count() }}
-                        </h1>
-                    </div>
-                </div>
+        filterSelect.addEventListener('change', function() {
+            let filterValue = this.value.toLowerCase();
+            let rows = document.querySelectorAll('#historyTable tr');
 
-            </main>
-        </div>
+            rows.forEach(row => {
+                // Kolom Label berada di index ke-7 (index array 6) atau kolom ke-7 dari tabel
+                let labelCell = row.querySelector('td:nth-child(7)');
+                if (labelCell) {
+                    let text = labelCell.innerText.toLowerCase();
 
-        <script>
-            const filterSelect = document.getElementById('filterCluster');
-
-            filterSelect.addEventListener('change', function() {
-                let filterValue = this.value.toLowerCase();
-                let rows = document.querySelectorAll('#historyTable tr');
-
-                rows.forEach(row => {
-                    // Kolom Label berada di index ke-7 (index array 6) atau kolom ke-7 dari tabel
-                    let labelCell = row.querySelector('td:nth-child(7)');
-                    if (labelCell) {
-                        let text = labelCell.innerText.toLowerCase();
-
-                        // Logika: Jika filter kosong (Tampilkan Semua) atau teks cell mengandung filter
-                        if (filterValue === "" || text.includes(filterValue)) {
-                            row.style.display = '';
-                        } else {
-                            row.style.display = 'none';
-                        }
+                    // Logika: Jika filter kosong (Tampilkan Semua) atau teks cell mengandung filter
+                    if (filterValue === "" || text.includes(filterValue)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
                     }
-                });
+                }
             });
-        </script>
+        });
+    </script>
 
-    </body>
+</body>
 
-    </html>
+</html>
